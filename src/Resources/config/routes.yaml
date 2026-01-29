@@ -1,0 +1,7 @@
+univ_lorraine_symfony_cas.login:
+    path: /login
+    controller: univ_lorraine_symfony_cas.authentication_controller::login
+
+univ_lorraine_symfony_cas.logout:
+    path: /logout
+    controller: univ_lorraine_symfony_cas.authentication_controller::logout

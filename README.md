@@ -64,7 +64,7 @@ The bundle provides 2 routes :
 For adding these routes to your app, create the file *config/routes/univ_lorraine_symfony_cas.yaml*, and add these settings:
 ```yaml
 _symfony_cas:
-  resource: '@UnivLorraineSymfonyCasBundle/Resources/config/routes.xml'
+  resource: '@UnivLorraineSymfonyCasBundle/Resources/config/routes.yaml'
   prefix: /auth-cas
 ```
 Feel free to use a different name as prefix, just remember it for the next security part.

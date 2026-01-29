@@ -4,13 +4,13 @@ namespace UnivLorraine\Bundle\SymfonyCasBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class UnivLorraineSymfonyCasExtension extends Extension
 {
     /**
-     * {@inheritdoc}
+     * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
@@ -23,8 +23,8 @@ class UnivLorraineSymfonyCasExtension extends Extension
         $container->register('univ_lorraine_symfony_cas.user_provider',
          'UnivLorraine\Bundle\SymfonyCasBundle\Security\User\CasUserProvider');
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.xml');
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.yaml');
 
         $definition = $container->getDefinition('univ_lorraine_symfony_cas.authentication_service');
         $definition->setArgument('$config', $config);
