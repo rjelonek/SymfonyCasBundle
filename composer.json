@@ -10,11 +10,17 @@
       "email": "benjamin.lemoine@univ-lorraine.fr"
     }
   ],
+  "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://github.com/rjelonek/phpCAS"
+      }
+  ],
   "require": {
     "php": ">=7.4",
-    "apereo/phpcas": "~1.6.1",
-    "symfony/framework-bundle": "^5.4|^6.0|^7.0",
-    "symfony/security-bundle": "^5.4|^6.0|^7.0"
+    "apereo/phpcas": "1.6.x-dev",
+    "symfony/framework-bundle": "^5.4|^6.0|^7.0|^8.0",
+    "symfony/security-bundle": "^5.4|^6.0|^7.0|^8.0"
   },
   "autoload": {
     "psr-4": {
